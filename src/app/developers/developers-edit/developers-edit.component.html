@@ -1,0 +1,84 @@
+<h1>
+  {{ form.value.id ? "Edit Developer" : "Add New Developer" }}
+</h1>
+<form [formGroup]="form" class="normal-form" (submit)="onApply()">
+  <section class="fields">
+    <div class="left">
+      <div mat-dialog-content>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input formControlName="name" matInput required />
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <input formControlName="phoneNumber" matInput required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Techology</mat-label>
+        <mat-select formControlName="technologyId" required>
+          <mat-option
+            *ngFor="let technology of technologies"
+            [value]="technology.id"
+          >
+            {{ technology.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Price per hour</mat-label>
+        <input formControlName="pricePerHour" matInput required />
+      </mat-form-field>
+    </div>
+    <div class="right">
+      <mat-form-field>
+        <mat-label>Years of experience</mat-label>
+        <input formControlName="yearsOfExperience" matInput required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Location</mat-label>
+        <mat-select formControlName="locationId" required>
+          <mat-option *ngFor="let location of locations" [value]="location.id">
+            {{ location.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Native language</mat-label>
+        <mat-select formControlName="nativeLanguage" required>
+          <mat-option *ngFor="let language of languages" [value]="language">
+            {{ language }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Profile picture URL</mat-label>
+        <input formControlName="profilePictureURL" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Linkedin profile link</mat-label>
+        <input formControlName="linkedinProfileLink" matInput />
+      </mat-form-field>
+    </div>
+  </section>
+  <section class="bot">
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        rows="5"
+        matInput
+        formControlName="description"
+        #description
+      ></textarea>
+    </mat-form-field>
+  </section>
+
+  <div class="buttons">
+    <button mat-raised-button class="button-purple" type="submit">Apply</button>
+    <button (click)="onClose()" mat-raised-button type="button">Cancel</button>
+  </div>
+</form>

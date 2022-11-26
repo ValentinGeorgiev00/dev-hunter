@@ -1,0 +1,19 @@
+<header>
+  <div class="logo">
+    <a [routerLink]="['']"
+      ><img src="../../../assets/images/dev-hunter.png"
+    /></a>
+  </div>
+  <div>
+    <ul *ngIf="!accessToken" class="navigation">
+      <li><a [routerLink]="['/login']"> Login </a></li>
+      <li><a [routerLink]="['/register']"> Register </a></li>
+    </ul>
+    <ul *ngIf="accessToken" class="navigation">
+      <li><a [routerLink]="['/technologies']"> Technologies </a></li>
+      <li><a [routerLink]="['/locations']"> Locations </a></li>
+      <li><a [routerLink]="['/developers']"> Developers </a></li>
+      <li><a (click)="onLogout()"> Logout </a></li>
+    </ul>
+  </div>
+</header>

@@ -1,0 +1,19 @@
+<h1>{{ form.value.id ? "Edit Location" : "Add New Location" }}</h1>
+<form [formGroup]="form" class="normal-form" (submit)="onApply()">
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Location Name</mat-label>
+      <input formControlName="name" matInput required />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Google map link</mat-label>
+      <input formControlName="googleMapLink" matInput />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button (click)="onClose()" mat-button type="button">Cancel</button>
+    <button mat-button type="submit">Apply</button>
+  </div>
+</form>

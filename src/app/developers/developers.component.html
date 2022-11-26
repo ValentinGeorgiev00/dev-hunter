@@ -1,0 +1,51 @@
+<main>
+  <h1>Developers</h1>
+  <button mat-raised-button (click)="openAddEditDialog()">Add developer</button>
+  <section class="wrapper" *ngFor="let developer of developers">
+    <ul>
+      <section class="img">
+        <li>
+          <img
+            [src]="
+              developer.profilePictureURL
+                ? developer.profilePictureURL
+                : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
+            "
+            alt=""
+          />
+        </li>
+      </section>
+      <li>
+        <section class="fields">
+          <li><span>Developer's Name:</span>{{ developer.name }}</li>
+          <li><span>Email:</span>{{ developer.email }}</li>
+          <li><span>Phone number:</span>{{ developer.phoneNumber }}</li>
+          <li><span>Technology:</span>{{ developer.technology.name }}</li>
+        </section>
+        <section class="fields">
+          <li><span>Native language:</span>{{ developer.nativeLanguage }}</li>
+          <li>
+            <span>Linkedin profile:</span>{{ developer.linkedinProfileLink }}
+          </li>
+          <li><span>Location:</span>{{ developer.location.name }}</li>
+        </section>
+
+        <section class="fields">
+          <li><span>Price per hour:</span>{{ developer.pricePerHour }}</li>
+          <li>
+            <span>Years of experience</span>{{ developer.yearsOfExperience }}
+          </li>
+          <li><span>Description:</span></li>
+          <li>{{ developer.description }}</li>
+        </section>
+      </li>
+    </ul>
+
+    <section class="buttons">
+      <button mat-raised-button (click)="openAddEditDialog(developer)">
+        Edit
+      </button>
+      <button mat-raised-button (click)="onDelete(developer.id)">Delete</button>
+    </section>
+  </section>
+</main>

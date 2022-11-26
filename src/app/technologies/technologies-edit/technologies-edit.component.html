@@ -1,0 +1,24 @@
+<h1>{{ form.value.id ? "Edit Course" : "Add New Course" }}</h1>
+<form [formGroup]="form" class="normal-form" (submit)="onApply()">
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Course Name</mat-label>
+      <input formControlName="name" matInput required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image Url</mat-label>
+      <input formControlName="image" matInput />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      (click)="onClose()"
+      mat-raised-button
+      class="button-red"
+      type="button"
+    >
+      Cancel
+    </button>
+    <button mat-button type="submit">Apply</button>
+  </div>
+</form>

@@ -1,0 +1,31 @@
+<main>
+
+  <h1>Technologies</h1>
+  <button mat-raised-button (click)="openAddEditDialog()">
+    Add technology
+  </button>
+  <div class="technologies-items">
+    <mat-card class="example-card" *ngFor="let technology of technologies">
+      <img
+        mat-card-image
+        [src]="
+          technology.image
+            ? technology.image
+            : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png'
+        "
+      />
+      <div class="center">
+        <mat-card-title>{{ technology.name }}</mat-card-title>
+      </div>
+<div class="center">
+  <mat-card-actions>
+    <button color="primary" (click)="openAddEditDialog(technology)" mat-button>Edit</button>
+    <button mat-button color="warn" (click)="onDelete(technology)">
+      Delete
+    </button>
+  </mat-card-actions>
+</div>
+      
+    </mat-card>
+  </div>
+</main>

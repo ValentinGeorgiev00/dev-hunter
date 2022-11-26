@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  background-color: rgb(193, 255, 234);
+}
+
+main {
+  width: 90%;
+  min-height: 87.4%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.navigation{
+  cursor:pointer;
+}
+
+.example-card {
+  width: 200px;
+}
+
+.technologies-items {
+  flex-direction: row;
+  gap: 20px;
+  width: 95%;
+  border-radius: 15px;
+  list-style-type: none;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mat-card-image {
+  height: 200px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.normal-form{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "email": "46296@gmail.com",
+      "password": "$2a$10$TF185bafJy/Yeyz6.Mzq9OxAO0MPaMApL5YLvi2IAN8dyJZ3w.AVq",
+      "username": "ValentinG",
+      "id": 1
+    },
+    {
+      "email": "valentin.georgiev@pliant.io",
+      "password": "$2a$10$uvcT1NzlORmu9TPybcH2leVqNSgulzL5EgD0ki1/CpmZuagCwH8Oe",
+      "username": "NeZnam",
+      "id": 2
+    }
+  ],
+  "technologies": [
+    {
+      "id": 2,
+      "name": "Angular",
+      "image": null
+    }
+  ],
+  "locations": [
+    {
+      "id": 2,
+      "name": "Sofia",
+      "googleMapLink": "https://www.google.com/maps/d/viewer?ie=UTF8&oe=UTF8&msa=0&mid=1nAFf0jBUObgcSOBE29BCak10zDE&ll=42.689778038304645%2C23.3615695&z=14"
+    },
+    {
+      "id": 3,
+      "name": "Svoge",
+      "googleMapLink": null
+    }
+  ],
+  "developers": [
+    {
+      "id": 2,
+      "name": "zxc",
+      "email": "46296@gmail.com",
+      "phoneNumber": "1234567890765432",
+      "locationId": 2,
+      "technologyId": 2,
+      "pricePerHour": "zxzc",
+      "yearsOfExperience": "21",
+      "nativeLanguage": "English",
+      "profilePictureURL": "",
+      "description": "zscdzsd",
+      "linkedinProfileLink": null
+    }
+  ]
+}
